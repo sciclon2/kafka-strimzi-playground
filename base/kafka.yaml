@@ -6,14 +6,12 @@ metadata:
 spec:
   kafka:
     version: 4.2.0
-    replicas: 1
+    metadataVersion: 4.2
     listeners:
       - name: plain
         port: 9092
         type: internal
         tls: false
-    storage:
-      type: ephemeral
   entityOperator:
     topicOperator: {}
     userOperator: {}
