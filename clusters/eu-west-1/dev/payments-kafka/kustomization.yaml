@@ -1,0 +1,4 @@
+resources:
+  - kafka.yaml
+  - controller-pool.yaml
+  - broker-pool.yaml

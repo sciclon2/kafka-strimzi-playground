@@ -1,0 +1,12 @@
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaNodePool
+metadata:
+  name: broker
+  labels:
+    strimzi.io/cluster: payments-kafka
+spec:
+  replicas: 3
+  roles:
+    - broker
+  storage:
+    type: ephemeral
