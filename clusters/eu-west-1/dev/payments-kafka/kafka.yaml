@@ -5,7 +5,7 @@ metadata:
 spec:
   kafka:
     version: "4.0.0"
-    metadataVersion: 4.0
+    metadataVersion: "4.0"
     listeners:
       - name: plain
         port: 9092
