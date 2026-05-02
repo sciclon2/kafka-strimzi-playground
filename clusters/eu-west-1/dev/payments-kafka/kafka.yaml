@@ -14,7 +14,7 @@ spec:
         port: 9092
         type: internal
         tls: false
-     - name: external
+      - name: external
         port: 9094
         type: nodeport
         tls: false
