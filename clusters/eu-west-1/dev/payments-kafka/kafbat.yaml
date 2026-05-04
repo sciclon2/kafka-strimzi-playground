@@ -21,7 +21,7 @@ spec:
         - name: KAFKA_CLUSTERS_0_NAME
           value: payments
         - name: KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS
-          value: payments-kafka-bootstrap:9092
+          value: payments-kafka-kafka-bootstrap:9092
         - name: DYNAMIC_CONFIG_ENABLED
           value: "true"
         - name: SERVER_PORT
