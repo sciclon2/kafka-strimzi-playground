@@ -2,3 +2,5 @@ resources:
   - kafka.yaml
   - controller-pool.yaml
   - broker-pool.yaml
+  - kafbat.yaml
+  - kafbat-service.yaml
