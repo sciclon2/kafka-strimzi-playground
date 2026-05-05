@@ -1,0 +1,28 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  name: test-user
+  namespace: dev
+  labels:
+    strimzi.io/cluster: payments-kafka   # VERY important
+spec:
+  authentication:
+    type: scram-sha-512
+  authorization:
+    type: simple
+    acls:
+      - resource:
+          type: topic
+          name: test
+          patternType: literal
+        operation: Read
+      - resource:
+          type: topic
+          name: test
+          patternType: literal
+        operation: Write
+      - resource:
+          type: group
+          name: test-group
+          patternType: literal
+        operation: Read
