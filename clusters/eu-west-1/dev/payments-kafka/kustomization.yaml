@@ -5,3 +5,4 @@ resources:
   - kafbat.yaml
   - kafbat-service.yaml
   - kafka-metrics-configmap.yaml
+  - kafka-users.yaml
