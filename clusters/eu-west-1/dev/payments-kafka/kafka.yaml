@@ -33,6 +33,15 @@ spec:
         configMapKeyRef:
           name: kafka-metrics
           key: kafka-metrics-config.yml
+    kafkaExporter:
+      topicRegex: ".*"
+      groupRegex: ".*"
+      authentication:
+        type: scram-sha-512
+        username: exporter-user
+        passwordSecret:
+          secretName: exporter-user
+          password: password
   entityOperator:
     topicOperator: {}
     userOperator: {}

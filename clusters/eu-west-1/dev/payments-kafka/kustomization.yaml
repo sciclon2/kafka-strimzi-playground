@@ -6,3 +6,4 @@ resources:
   - kafbat-service.yaml
   - kafka-metrics-configmap.yaml
   - kafka-users.yaml
+  - kafka-exporter-user.yaml

@@ -1,0 +1,28 @@
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaUser
+metadata:
+  name: exporter-user
+  namespace: dev
+  labels:
+    strimzi.io/cluster: payments-kafka
+spec:
+  authentication:
+    type: scram-sha-512
+  authorization:
+    type: simple
+    acls:
+      # Read topic metadata (required)
+      - resource:
+          type: topic
+          name: "*"
+          patternType: literal
+        operations:
+          - Describe
+
+      # Read consumer groups (required for lag)
+      - resource:
+          type: group
+          name: "*"
+          patternType: literal
+        operations:
+          - Describe
