@@ -18,6 +18,7 @@ spec:
         operations:
           - Read
           - Write
+          - Create 
       - resource:
           type: group
           name: test-group
