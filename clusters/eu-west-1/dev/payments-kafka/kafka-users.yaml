@@ -4,7 +4,7 @@ metadata:
   name: test-user
   namespace: dev
   labels:
-    strimzi.io/cluster: payments-kafka   # VERY important
+    strimzi.io/cluster: payments-kafka
 spec:
   authentication:
     type: scram-sha-512
@@ -15,14 +15,12 @@ spec:
           type: topic
           name: test
           patternType: literal
-        operation: Read
-      - resource:
-          type: topic
-          name: test
-          patternType: literal
-        operation: Write
+        operations:
+          - Read
+          - Write
       - resource:
           type: group
           name: test-group
           patternType: literal
-        operation: Read
+        operations:
+          - Read
