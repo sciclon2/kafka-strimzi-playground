@@ -28,3 +28,9 @@ spec:
   entityOperator:
     topicOperator: {}
     userOperator: {}
+  metricsConfig:
+    type: jmxPrometheusExporter
+    valueFrom:
+      configMapKeyRef:
+        name: kafka-metrics
+        key: kafka-metrics-config.yml
