@@ -6,6 +6,9 @@ metadata:
     strimzi.io/node-pools: enabled
     strimzi.io/kraft: enabled
 spec:
+  clusterCa:
+    validityDays: 1095
+    renewalDays: 30
   kafka:
     version: "4.2.0"
     metadataVersion: "4.2"
